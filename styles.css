@@ -610,10 +610,21 @@ p {
 
 .section-divider--paper {
   background: var(--paper);
+  margin-top: -12px;
+  margin-bottom: -8px;
+}
+
+.section-divider--paper svg {
+  width: calc(100% + 10px);
+  height: 128px;
+  margin-left: -5px;
+  transform: translateY(-22px);
 }
 
 .section-divider--paper path {
   fill: var(--paper-soft);
+  stroke: var(--paper-soft);
+  stroke-width: 2px;
 }
 
 .section-divider--dark {
@@ -2386,9 +2397,9 @@ p {
 
   .section-divider--paper svg {
     width: calc(100% + 10px);
-    height: 88px;
+    height: 96px;
     margin-left: -5px;
-    transform: translateY(1px);
+    transform: translateY(-18px);
   }
 
   .section-divider--paper path {
@@ -2843,9 +2854,9 @@ p {
 
   .section-divider--paper svg {
     width: calc(100% + 12px);
-    height: 82px;
+    height: 90px;
     margin-left: -6px;
-    transform: translateY(1px);
+    transform: translateY(-16px);
   }
 
   .button {
