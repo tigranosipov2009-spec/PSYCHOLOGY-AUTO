@@ -2380,14 +2380,7 @@ p {
   }
 
   .section-divider--paper {
-    margin-top: -8px;
-    margin-bottom: -18px;
-  }
-
-  .section-divider--paper svg {
-    width: calc(100% + 10px);
-    height: 88px;
-    margin-left: -5px;
+    display: none;
   }
 
   .eyebrow {
@@ -2827,17 +2820,6 @@ p {
 
   .section-divider svg {
     height: 72px;
-  }
-
-  .section-divider--paper {
-    margin-top: -8px;
-    margin-bottom: -16px;
-  }
-
-  .section-divider--paper svg {
-    width: calc(100% + 10px);
-    height: 80px;
-    margin-left: -5px;
   }
 
   .button {
