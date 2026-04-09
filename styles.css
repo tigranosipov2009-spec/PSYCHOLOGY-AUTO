@@ -2379,6 +2379,17 @@ p {
     height: 78px;
   }
 
+  .section-divider--paper {
+    margin-top: -4px;
+    margin-bottom: -28px;
+  }
+
+  .section-divider--paper svg {
+    width: calc(100% + 8px);
+    height: 62px;
+    margin-left: -4px;
+  }
+
   .eyebrow {
     margin-bottom: 12px;
     font-size: 0.72rem;
@@ -2816,6 +2827,17 @@ p {
 
   .section-divider svg {
     height: 72px;
+  }
+
+  .section-divider--paper {
+    margin-top: -4px;
+    margin-bottom: -24px;
+  }
+
+  .section-divider--paper svg {
+    width: calc(100% + 8px);
+    height: 56px;
+    margin-left: -4px;
   }
 
   .button {
