@@ -18,6 +18,7 @@ const quizSummary = document.querySelector("[data-quiz-summary]");
 const quizSummaryTitle = document.querySelector("[data-quiz-summary-title]");
 const quizSummaryText = document.querySelector("[data-quiz-summary-text]");
 const quizScrollButton = document.querySelector("[data-quiz-scroll]");
+const contactSection = document.querySelector("#contact");
 
 const formTopic = leadForm ? leadForm.querySelector('select[name="topic"]') : null;
 const formMessage = leadForm ? leadForm.querySelector('textarea[name="message"]') : null;
@@ -55,6 +56,18 @@ const quizQuestions = [
 
 const quizAnswers = [];
 let currentQuizIndex = 0;
+
+function scrollToContactForm() {
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  setTimeout(() => {
+    if (formName) {
+      formName.focus();
+    }
+  }, 450);
+}
 
 function syncQuizNavigation(index) {
   if (!quizBackButton || !quizNextButton) {
@@ -194,6 +207,19 @@ function renderQuizQuestion(index) {
 
     button.addEventListener("click", () => {
       quizAnswers[index] = option;
+
+      if (index === quizQuestions.length - 1) {
+        button.classList.add("is-selected");
+        button.setAttribute("aria-pressed", "true");
+
+        window.setTimeout(() => {
+          renderQuizSummary();
+          scrollToContactForm();
+        }, 120);
+
+        return;
+      }
+
       renderQuizQuestion(index + 1);
     });
 
@@ -266,21 +292,18 @@ if (quizNextButton) {
       return;
     }
 
+    const isLastQuestion = currentQuizIndex === quizQuestions.length - 1;
     renderQuizQuestion(currentQuizIndex + 1);
+
+    if (isLastQuestion) {
+      scrollToContactForm();
+    }
   });
 }
 
 if (quizScrollButton) {
   quizScrollButton.addEventListener("click", () => {
-    const contactSection = document.querySelector("#contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    setTimeout(() => {
-      if (formName) {
-        formName.focus();
-      }
-    }, 450);
+    scrollToContactForm();
   });
 }
 
