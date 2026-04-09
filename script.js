@@ -18,10 +18,6 @@ const quizSummary = document.querySelector("[data-quiz-summary]");
 const quizSummaryTitle = document.querySelector("[data-quiz-summary-title]");
 const quizSummaryText = document.querySelector("[data-quiz-summary-text]");
 const quizScrollButton = document.querySelector("[data-quiz-scroll]");
-<<<<<<< HEAD
-const contactSection = document.querySelector("#contact");
-=======
->>>>>>> 4d27271c61c7fdd29b2fcc7a104d255ffd7567f7
 
 const formTopic = leadForm ? leadForm.querySelector('select[name="topic"]') : null;
 const formMessage = leadForm ? leadForm.querySelector('textarea[name="message"]') : null;
@@ -59,22 +55,6 @@ const quizQuestions = [
 
 const quizAnswers = [];
 let currentQuizIndex = 0;
-
-<<<<<<< HEAD
-function scrollToContactForm() {
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-  setTimeout(() => {
-    if (formName) {
-      formName.focus();
-    }
-  }, 450);
-}
-
-=======
->>>>>>> 4d27271c61c7fdd29b2fcc7a104d255ffd7567f7
 function syncQuizNavigation(index) {
   if (!quizBackButton || !quizNextButton) {
     return;
@@ -213,22 +193,6 @@ function renderQuizQuestion(index) {
 
     button.addEventListener("click", () => {
       quizAnswers[index] = option;
-<<<<<<< HEAD
-
-      if (index === quizQuestions.length - 1) {
-        button.classList.add("is-selected");
-        button.setAttribute("aria-pressed", "true");
-
-        window.setTimeout(() => {
-          renderQuizSummary();
-          scrollToContactForm();
-        }, 120);
-
-        return;
-      }
-
-=======
->>>>>>> 4d27271c61c7fdd29b2fcc7a104d255ffd7567f7
       renderQuizQuestion(index + 1);
     });
 
@@ -301,24 +265,12 @@ if (quizNextButton) {
       return;
     }
 
-<<<<<<< HEAD
-    const isLastQuestion = currentQuizIndex === quizQuestions.length - 1;
     renderQuizQuestion(currentQuizIndex + 1);
-
-    if (isLastQuestion) {
-      scrollToContactForm();
-    }
-=======
-    renderQuizQuestion(currentQuizIndex + 1);
->>>>>>> 4d27271c61c7fdd29b2fcc7a104d255ffd7567f7
   });
 }
 
 if (quizScrollButton) {
   quizScrollButton.addEventListener("click", () => {
-<<<<<<< HEAD
-    scrollToContactForm();
-=======
     const contactSection = document.querySelector("#contact");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -328,7 +280,6 @@ if (quizScrollButton) {
         formName.focus();
       }
     }, 450);
->>>>>>> 4d27271c61c7fdd29b2fcc7a104d255ffd7567f7
   });
 }
 
