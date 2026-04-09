@@ -609,22 +609,11 @@ p {
 }
 
 .section-divider--paper {
-  background: var(--paper);
-  margin-top: -12px;
-  margin-bottom: -8px;
-}
-
-.section-divider--paper svg {
-  width: calc(100% + 10px);
-  height: 128px;
-  margin-left: -5px;
-  transform: translateY(-22px);
+  background: transparent;
 }
 
 .section-divider--paper path {
   fill: var(--paper-soft);
-  stroke: var(--paper-soft);
-  stroke-width: 2px;
 }
 
 .section-divider--dark {
@@ -2390,24 +2379,6 @@ p {
     height: 78px;
   }
 
-  .section-divider--paper {
-    margin-top: -10px;
-    margin-bottom: -10px;
-  }
-
-  .section-divider--paper svg {
-    width: calc(100% + 10px);
-    height: 96px;
-    margin-left: -5px;
-    transform: translateY(-18px);
-  }
-
-  .section-divider--paper path {
-    fill: var(--paper-soft);
-    stroke: var(--paper-soft);
-    stroke-width: 2px;
-  }
-
   .eyebrow {
     margin-bottom: 12px;
     font-size: 0.72rem;
@@ -2845,18 +2816,6 @@ p {
 
   .section-divider svg {
     height: 72px;
-  }
-
-  .section-divider--paper {
-    margin-top: -12px;
-    margin-bottom: -12px;
-  }
-
-  .section-divider--paper svg {
-    width: calc(100% + 12px);
-    height: 90px;
-    margin-left: -6px;
-    transform: translateY(-16px);
   }
 
   .button {
